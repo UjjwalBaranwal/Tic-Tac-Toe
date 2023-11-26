@@ -1,0 +1,11 @@
+{
+  "name": "tic-tac-toe--multiplayer",
+  "version": "1.0.0",
+  "description": "a multiplayer tic tac toe game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ujjwal",
+  "license": "ISC"
+}
