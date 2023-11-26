@@ -4,39 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>TIC-TAC-TOE</h1>
-    <div>
-      <p id="userCont">You : <span class="user"></span></p>
-      <p id="oppNameCont">Opponent : <span class="oppName"></span></p>
-    </div>
-    <p id="valueCont">You are playing as <span id="value"></span></p>
-    <p id="whosTurn">X's Turn</p>
-    <div>
-      <p id="name">Enter your name</p>
-      <input
-        type="text"
-        placeholder="enter your name"
-        id="name"
-        autocomplete="off"
-      />
-    </div>
-    <button id="find">search for a player</button>
-    <img src="./spinner.gif" alt="loading" />
+    <h1>TIC_TAC_TOE</h1>
+    <div class="container">
+      <div class="side-bar">
+        <button class="ctnBtn btn">Connect</button>
+        <button class="crtBtn btn">Create</button>
+        <label for="" class="label">Available Games</label>
+        <ul class="game-list">
+          <li>no games</li>
+        </ul>
+        <button class="joinBtn btn">Join</button>
+      </div>
 
-    <div id="bigCont center">
-      <div id="cont grid grid--3">
-        <button id="id1" class="btn"></button
-        ><button id="id2" class="btn"></button
-        ><button id="id3" class="btn"></button
-        ><button id="id4" class="btn"></button
-        ><button id="id5" class="btn"></button
-        ><button id="id6" class="btn"></button
-        ><button id="id7" class="btn"></button
-        ><button id="id8" class="btn"></button
-        ><button id="id9" class="btn"></button>
+      <div class="main-bar">
+        <div class="board">
+          <div id="cell-1" class="cell"></div>
+          <div id="cell-2" class="cell"></div>
+          <div id="cell-3" class="cell"></div>
+          <div id="cell-4" class="cell"></div>
+          <div id="cell-5" class="cell"></div>
+          <div id="cell-6" class="cell"></div>
+          <div id="cell-7" class="cell"></div>
+          <div id="cell-8" class="cell"></div>
+          <div id="cell-9" class="cell"></div>
+        </div>
       </div>
     </div>
   </body>

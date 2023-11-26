@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9eaf8;
+}
+h1 {
+  text-align: center;
+  position: relative;
+}
+h1::before,
+h1::after {
+  content: "";
+  height: 2px;
+  width: 100vw;
+  background-color: #035172;
+  position: absolute;
+  left: 0;
+}
+
+h1::after {
+  bottom: 0;
+}
+
+.container {
+  border: 2px solid red;
+  width: 800px;
+  margin: 200px auto;
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background-color: #5a8090;
+}
+.game-list {
+  list-style: none;
+}
+.btn,
+.label {
+  background-color: #97b4c0;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main-bar {
+  background-color: #7fb6cd;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  border: 2px solid grey;
+  height: 70%;
+  width: 70%;
+  display: none;
+  grid-template-columns: repeat(3, auto);
+  align-content: center;
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell:first-child,
+:nth-child(2),
+:nth-child(3) {
+  border-top: none;
+}
+
+.cell:last-child,
+:nth-child(8),
+:nth-child(7) {
+  border-bottom: none;
+}
+.cell:nth-child(3n) {
+  border-right: none;
+}
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+.board.circle .cell:not(.cross):not(.cross):hover::after,
+.cell.circle::after {
+  content: "";
+  background-color: #7fb6cd;
+  border-radius: 50%;
+  height: 90px;
+  width: 86px;
+  position: absolute;
+}
+.board.circle .cell:not(.cross):not(.cross):hover::before,
+.cell.circle::before {
+  content: "";
+  background-color: #035172;
+  border-radius: 50%;
+  height: 97px;
+  width: 93px;
+  position: absolute;
+}
+.board.cross .cell:not(.cross):not(.cross):hover::after,
+.cell.cross::after {
+  background-color: #035172;
+  content: "";
+  position: absolute;
+  height: 97px;
+  width: 3px;
+  transform: rotate(-45deg);
+}
+.board.cross .cell:not(.cross):not(.cross):hover::before,
+.cell.cross::before {
+  content: "";
+  background-color: #035172;
+  position: absolute;
+  height: 97px;
+  width: 3px;
+  transform: rotate(45deg);
+}
+
+.cell.cross,
+.cell.circle {
+  cursor: not-allowed;
+}
